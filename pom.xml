@@ -2,14 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.xwiki.contrib</groupId>
+    <groupId>de.rototor</groupId>
     <artifactId>sass-gems</artifactId>
-    <version>3.3.6</version>
+    <version>3.3.8</version>
     <packaging>jar</packaging>
 
     <name>SASS Gems - Gem in a Jar for SASS</name>
     <inceptionYear>2014</inceptionYear>
-    <url>https://github.com/xwiki-contrib/sass-gems</url>
+    <url>https://github.com/rototor/sass-gems</url>
 
     <description>
         This is a repackaged GEM in a JAR format of the sass-lang.gem package. The sass-gems package version
@@ -31,9 +31,9 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/xwiki-contrib/sass-gems</url>
-        <developerConnection>scm:git:git@github.com:xwiki-contrib/sass-gems.git</developerConnection>
-        <connection>scm:git:git@github.com:xwiki-contrib/sass-gems.git</connection>
+        <url>https://github.com/rototor/sass-gems</url>
+        <developerConnection>scm:git:git@github.com:rototor/sass-gems.git</developerConnection>
+        <connection>scm:git:git@github.com:rototor/sass-gems.git</connection>
     </scm>
 
     <build>
@@ -150,11 +150,14 @@
                 </plugins>
             </build>
             <distributionManagement>
-              <repository>
-                <id>xwiki-staging</id>
-                <name>XWiki Staging Repository</name>
-                <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
-              </repository>
+		<repository>
+			<id>repo-deploy</id>
+			<url>http://ems:emsems@10.50.3.5:8081/artifactory/ext-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>repo-deploy-snapshot</id>
+			<url>http://ems:emsems@10.50.3.5:8081/artifactory/ext-snapshot-local</url>
+		</snapshotRepository>
             </distributionManagement>
         </profile>
     </profiles>
